@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: patient4-api-config
+  namespace: default
+data:
+  APP_ENV: "production"
+  SERVICE_NAME: "patient4-api"
+  REDIS_URL: "redis://:$REDIS_PASSWORD@patient4-api-redis-master.patient4-api.svc.cluster.local:6379/0"
